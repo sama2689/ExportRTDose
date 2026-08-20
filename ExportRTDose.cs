@@ -15,8 +15,8 @@ namespace VMS.TPS
     public class Script
     {
         // Change these paths for your local setup.
-        private const string PythonExe = @"C:\Python311\python.exe";
-        private const string PythonScript = @"C:\ESAPI\Scripts\write_rtdose.py";
+        private const string PythonExe = @"V:\Public\Users\Pratik Samant\PythonLauncher\Samant\venvTBOX\python.exe\Scripts\python.exe";
+        private const string PythonScript = @"V:\Public\Users\Pratik Samant\Projects\ExportRTDose\write_rtdose.py";
 
         public void Execute(ScriptContext context)
         {
@@ -221,6 +221,24 @@ namespace VMS.TPS
 
         private static void RunPython(string metaPath)
         {
+            string workingDirectory = Path.GetDirectoryName(PythonScript);
+
+            /*MessageBox.Show(
+                "Python executable:\n" + PythonExe +
+                "\n\nExists: " + File.Exists(PythonExe) +
+
+                "\n\nPython script:\n" + PythonScript +
+                "\n\nExists: " + File.Exists(PythonScript) +
+
+                "\n\nWorking directory:\n" + workingDirectory +
+                "\n\nExists: " + Directory.Exists(workingDirectory) +
+
+                "\n\nMetadata:\n" + metaPath +
+                "\n\nExists: " + File.Exists(metaPath),
+                "Python launch diagnostics");
+            */ //comments to check that these directories exist
+
+
             ProcessStartInfo psi = new ProcessStartInfo
             {
                 FileName = PythonExe,

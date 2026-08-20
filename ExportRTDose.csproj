@@ -6,7 +6,7 @@
     <ProjectGuid>{39AB59F6-9F2D-4AA9-852A-4A605901936A}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExportRtDose</RootNamespace>
+    <RootNamespace>ExportRTDose</RootNamespace>
     <AssemblyName>ExportRTDose.esapi</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -55,10 +55,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PythonScript.py" />
+    <Compile Include="ExportRTDose.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExportRTDose.cs" />
+    <None Include="write_rtdose.py" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
